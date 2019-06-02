@@ -1,0 +1,16 @@
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 101%;
+}
+
+.application-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

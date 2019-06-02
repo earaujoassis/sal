@@ -10,7 +10,17 @@ module.exports = (env, options) => ({
     minimizer: [
       new UglifyJsPlugin({ cache: true, parallel: true, sourceMap: false }),
       new OptimizeCSSAssetsPlugin({})
-    ]
+    ],
+    splitChunks: {
+      cacheGroups: {
+        styles: {
+          name: 'styles',
+          test: /\.css$/,
+          chunks: 'all',
+          enforce: true
+        }
+      }
+    }
   },
   entry: {
     './assets/js/app.js': ['./assets/js/app.js'].concat(glob.sync('./assets/vendor/**/*.js'))
