@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :sal, Sal.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "earaujoassis",
+  password: "",
   database: "sal_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
@@ -26,7 +26,7 @@ config :sal, SalWeb.Endpoint,
       "--mode",
       "development",
       "--watch-stdin",
-      cd: Path.expand("../assets", __DIR__)
+      cd: Path.expand("..", __DIR__)
     ]
   ]
 
